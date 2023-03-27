@@ -43,15 +43,16 @@ function handleModalOpen(event) {
     return;
      }
     
-    import * as basicLightbox from 'basiclightbox' 
-    
-    const instance = basicLightbox.create(` <img
+    const instance = basicLightbox.create(`<div class="modal"> <img
                 class="gallery__image"
-                src="${currentLi.dataset.sourse}"
+                src="${currentLi.dataset.source}"
                 width="800" height="600"
-            />`).show() 
-
+            /></div>`)
+       
+    instance.show() 
 
 };
+
+
 
 
