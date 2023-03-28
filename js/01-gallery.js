@@ -48,11 +48,17 @@ function handleModalOpen(event) {
                 src="${currentLi.dataset.source}"
                 width="800" height="600"
             /></div>`)
-       
-    instance.show() 
 
+    instance.show();
+
+    currentLi.addEventListener("keydown", handleModalClose); 
+        
+    function handleModalClose(ev) {
+        if (ev.code !== "Escape") {
+            return;
+        }
+        
+        instance.close()
+    }
+  
 };
-
-
-
-
